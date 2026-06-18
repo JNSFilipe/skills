@@ -17,11 +17,7 @@
       "homepage": "https://github.com/JNSFilipe/skills",
       "repository": "https://github.com/JNSFilipe/skills",
       "license": "MIT",
-      "source": {
-        "source": "git",
-        "url": "https://github.com/JNSFilipe/skills.git",
-        "ref": "main"
-      }
+      "source": "./plugins/dev-skills"
     }
   ]
 }
