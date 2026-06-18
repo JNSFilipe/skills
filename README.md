@@ -1,4 +1,4 @@
-# 🛠️ Agent Skills for Claude Code & Codex
+# Agent Skills for Claude Code & Codex
 
 A curated collection of 5 powerful custom agent skills designed to enhance and direct AI coders (like **Claude Code** and **Codex / Gemini Code Assist**). These skills enable structured processes for system design, codebase refactoring, test-driven development, issue breakdown, and requirements definition.
 
@@ -7,19 +7,19 @@ Sources & Inspiration:
 
 ---
 
-## 📦 Included Skills
+## Included Skills
 
 | Command / Trigger | Directory | Description |
 | :--- | :--- | :--- |
-| `/grilling` | [`skills/grill-me`](file:///Users/jfilipe/Documents/GitHub/skills/skills/grill-me) | Walks the user relentlessly down a design tree to stress-test plans, resolve dependencies, and find a shared understanding. |
-| `/improve-codebase-architecture` | [`skills/improve-codebase-architecture`](file:///Users/jfilipe/Documents/GitHub/skills/skills/improve-codebase-architecture) | Scans a codebase for refactoring opportunities, outputs a visual HTML report, and recommends design improvements. |
-| `/tdd` | [`skills/tdd`](file:///Users/jfilipe/Documents/GitHub/skills/skills/tdd) | Directs a vertical, tracer-bullet test-driven development flow (red-green-refactor) focused on public interfaces. |
-| `/to-issues` | [`skills/to-issues`](file:///Users/jfilipe/Documents/GitHub/skills/skills/to-issues) | Breaks a plan or PRD into independently-trackable vertical tracer-bullet issues for issue trackers (e.g. GitHub/Jira). |
-| `/to-prd` | [`skills/to-prd`](file:///Users/jfilipe/Documents/GitHub/skills/skills/to-prd) | Synthesizes current conversation context and codebase state into a Product Requirements Document (PRD). |
+| `/grill-me` | [`skills/grill-me`](skills/grill-me) | Walks the user relentlessly down a design tree to stress-test plans, resolve dependencies, and find a shared understanding. |
+| `/improve-codebase-architecture` | [`skills/improve-codebase-architecture`](skills/improve-codebase-architecture) | Scans a codebase for refactoring opportunities, outputs a visual HTML report, and recommends design improvements. |
+| `/tdd` | [`skills/tdd`](skills/tdd) | Directs a vertical, tracer-bullet test-driven development flow (red-green-refactor) focused on public interfaces. |
+| `/to-issues` | [`skills/to-issues`](skills/to-issues) | Breaks a plan or PRD into independently-trackable vertical tracer-bullet issues for issue trackers (e.g. GitHub/Jira). |
+| `/to-prd` | [`skills/to-prd`](skills/to-prd) | Synthesizes current conversation context and codebase state into a Product Requirements Document (PRD). |
 
 ---
 
-## 🚀 Easy Installation
+## Easy Installation
 
 You can install all 5 skills at once using the interactive helper script `install.sh`. 
 
@@ -52,20 +52,21 @@ This installs:
 - Codex skills in `~/.gemini/config/skills/`
 
 ### 4. Claude Code Plugin Marketplace (Alternative)
-You can register this repository directly as a custom plugin marketplace in Claude Code:
-1. Run the following command in Claude Code (or paste the repository URL `https://github.com/JNSFilipe/skills` in the "Add marketplace" UI):
+You can register this repository directly as a custom plugin marketplace in Claude Code. The marketplace manifest lives at [`.claude-plugin/marketplace.json`](.claude-plugin/marketplace.json), and it installs the plugin from [`plugins/dev-skills`](plugins/dev-skills).
+
+1. Add this repository as a marketplace:
    ```bash
    /plugin marketplace add JNSFilipe/skills
    ```
-2. Install the `dev-skills` plugin from the newly added marketplace:
+2. Install the `dev-skills` plugin:
    ```bash
    /plugin install dev-skills@jnsfilipe-skills
    ```
-This will register all 5 skills (`/grilling`, `/tdd`, `/to-prd`, `/to-issues`, `/improve-codebase-architecture`) natively.
+This exposes all 5 plugin skills in Claude Code: `dev-skills:grill-me`, `dev-skills:tdd`, `dev-skills:to-prd`, `dev-skills:to-issues`, and `dev-skills:improve-codebase-architecture`.
 
 ---
 
-## ⚙️ Installation Modes
+## Installation Modes
 
 You can specify how files are installed via the `--mode` flag:
 
@@ -85,7 +86,7 @@ Examples:
 
 ---
 
-## 🛠️ Requirements & Structure
+## Requirements & Structure
 Each skill in the `skills/` directory contains:
 - `SKILL.md`: The instruction document containing YAML frontmatter (`name` and `description`) followed by system instructions.
 - Supporting resources (e.g., helper markdown files, guidelines, or templates) that are referenced relative to the `SKILL.md` file.
@@ -94,7 +95,7 @@ Both Claude Code and Codex will automatically parse these directories and regist
 
 ---
 
-## 🗑️ Uninstallation
+## Uninstallation
 
 If you ever need to uninstall the skills, you can use the `uninstall.sh` script.
 

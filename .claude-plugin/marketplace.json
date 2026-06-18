@@ -1,7 +1,7 @@
 {
   "name": "jnsfilipe-skills",
   "version": "1.0.0",
-  "description": "5 custom agent skills for Claude Code and Codex",
+  "description": "Five custom agent skills for Claude Code and Codex",
   "owner": {
     "name": "JNSFilipe",
     "url": "https://github.com/JNSFilipe"
@@ -10,7 +10,7 @@
     {
       "name": "dev-skills",
       "version": "1.0.0",
-      "description": "A collection of 5 custom agent skills (grilling, tdd, to-prd, to-issues, improve-codebase-architecture)",
+      "description": "A collection of five custom agent skills (grill-me, tdd, to-prd, to-issues, improve-codebase-architecture)",
       "author": {
         "name": "JNSFilipe"
       },
