@@ -1,0 +1,19 @@
+{
+  "name": "dev-skills",
+  "version": "1.0.0",
+  "description": "A collection of 5 custom agent skills (grilling, tdd, to-prd, to-issues, improve-codebase-architecture)",
+  "author": {
+    "name": "JNSFilipe",
+    "url": "https://github.com/JNSFilipe"
+  },
+  "homepage": "https://github.com/JNSFilipe/skills",
+  "repository": "https://github.com/JNSFilipe/skills",
+  "license": "MIT",
+  "skills": [
+    "skills/grill-me/SKILL.md",
+    "skills/improve-codebase-architecture/SKILL.md",
+    "skills/tdd/SKILL.md",
+    "skills/to-issues/SKILL.md",
+    "skills/to-prd/SKILL.md"
+  ]
+}

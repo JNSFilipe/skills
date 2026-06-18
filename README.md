@@ -51,6 +51,18 @@ This installs:
 - Claude Code skills in `~/.claude/skills/`
 - Codex skills in `~/.gemini/config/skills/`
 
+### 4. Claude Code Plugin Marketplace (Alternative)
+You can register this repository directly as a custom plugin marketplace in Claude Code:
+1. Run the following command in Claude Code (or paste the repository URL `https://github.com/JNSFilipe/skills` in the "Add marketplace" UI):
+   ```bash
+   /plugin marketplace add JNSFilipe/skills
+   ```
+2. Install the `dev-skills` plugin from the newly added marketplace:
+   ```bash
+   /plugin install dev-skills@jnsfilipe-skills
+   ```
+This will register all 5 skills (`/grilling`, `/tdd`, `/to-prd`, `/to-issues`, `/improve-codebase-architecture`) natively.
+
 ---
 
 ## ⚙️ Installation Modes
