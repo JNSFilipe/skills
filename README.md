@@ -23,7 +23,7 @@ Each platform file mirrors the canonical skill text so the behavior stays consis
 To keep all platform files synchronized, always edit `/skill.md` first and then copy it to platform paths:
 
 ```bash
-cp /home/runner/work/skills/skills/skill.md /home/runner/work/skills/skills/claude-code/SKILL.md
-cp /home/runner/work/skills/skills/skill.md /home/runner/work/skills/skills/cortex/skill.md
-cp /home/runner/work/skills/skills/skill.md /home/runner/work/skills/skills/antigravity/skill.md
+cp skill.md claude-code/SKILL.md
+cp skill.md cortex/skill.md
+cp skill.md antigravity/skill.md
 ```
