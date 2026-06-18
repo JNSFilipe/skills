@@ -13,6 +13,12 @@ for dir in claude-code cortex antigravity; do
   fi
 done
 
+for target in claude-code/SKILL.md cortex/skill.md antigravity/skill.md; do
+  if [[ -f "$target" ]] && ! cmp -s skill.md "$target"; then
+    echo "warning: $target has local differences and will be overwritten" >&2
+  fi
+done
+
 cp skill.md claude-code/SKILL.md
 cp skill.md cortex/skill.md
 cp skill.md antigravity/skill.md
